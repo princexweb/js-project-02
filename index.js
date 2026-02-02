@@ -7,10 +7,11 @@ btn.addEventListener("click", function() {
     let div = document.createElement("div");
     div.style.backgroundColor = randomColor;
     console.log(randomColor,colors.indexOf(randomColor));
-    div.innerHTML = randomColor;
+    div.style.borderRadius = "50%";
     main.style.overflow = "hidden";
-    div.style.height = "7rem";
-    div.style.width = "7rem";
+    let c1 = Math.floor(Math.random() * 6);
+    div.style.height = `${c1}rem`;
+    div.style.width = `${c1}rem`;
     div.style.position = "absolute";
     div.style.top = Math.random() * 100 + "%";
     div.style.left = Math.random() * 100 + "%";
