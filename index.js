@@ -1,7 +1,5 @@
-let main = document.querySelector("main");
-let img = document.querySelector("img");
-main.addEventListener("mousemove", function(hola) {
-  img.style.top = hola.y + "px";
-  img.style.left = hola.x + "px";
-  console.log(hola.x, hola.y);
-})
+let hi = document.querySelector('h1');
+let body = document.querySelector('body');
+body.addEventListener('keydown', (hello) => {
+  hi.innerHTML = hello.code;
+});
