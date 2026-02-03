@@ -1,37 +1,66 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
-
-html,
-body {
-    height: 100%;
-    width: 100%;
+html,body{
+ height: 100%;
+ width: 100%;
 }
-
-main {
-    height: 100%;
-    width: 100%;
+@mixin centerFlex{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(0, 0, 0);
-
-    button {
-        padding: 15px 30px;
-        font-size: 20px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-
-        &:hover {
-            background-color: lightgray;
+    flex-direction: column;
+}
+main{
+    height: 100%;
+    width: 100%;
+    @include centerFlex;
+    background: #000;
+    .card{
+        height: 30rem;
+        width: 30rem;
+        background-color: #ffffff;
+        @include centerFlex;
+        border-radius: 1rem;
+        justify-content: space-around;
+        img{
+            margin-top: 1rem;
+            height: 40%;
+            width: 40%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        .name{
+            font-size: 2rem;
+            font-weight: 600;
+            color: #000000;
+        }
+        p{
+            font-size: 1.2rem;
+            color: #333333;
+            text-align: center;
+            padding: 0 1rem;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
 
-        &:active {
-            transform: scale(0.98);
-            transition: all 0.1s ease-in-out;
+        button{
+            padding: 0.7rem 2rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 0.5rem;
+            background-color: #000000;
+            color: #ffffff;
+            cursor: pointer;
+            margin-bottom: 1rem;
+            transition: background-color 0.3s, color 0.3s;
+            &:active{
+                background-color: #ffffff;
+                color: #000000;
+                border: 1px solid #000000;
+            }
         }
     }
+
 }
