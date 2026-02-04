@@ -9,18 +9,35 @@ html, body {
   width: 100%;
 }
 
-body {
+main {
+  height: 100%;
+  width: 100%;
+  background-color: #222831;
+}
+main #box {
+  height: 40%;
+  width: 100%;
+  background-color: #333;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  margin-left: 0.5rem;
+}
+main #box .hel {
+  height: 90%;
+  width: 8%;
+  margin: 0.5rem;
+  background-color: #999;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+main #box .hel button {
   height: 100%;
   width: 100%;
-  background-color: #000000;
-}
-body h1 {
-  color: #ffffff;
-  padding: 10px 30px;
-  font-size: 5rem;
-  border-radius: 1rem;
-  background-color: #201e1e;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
