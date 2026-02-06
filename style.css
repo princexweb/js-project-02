@@ -9,35 +9,24 @@ html, body {
   width: 100%;
 }
 
-main {
-  height: 100%;
-  width: 100%;
-  background-color: #222831;
+:root {
+  --x: 0px;
+  --y: 0px;
 }
-main #box {
-  height: 40%;
-  width: 100%;
-  background-color: #333;
+
+main {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  margin-left: 0.5rem;
-}
-main #box .hel {
-  height: 90%;
-  width: 8%;
-  margin: 0.5rem;
-  background-color: #999;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-}
-main #box .hel button {
   height: 100%;
   width: 100%;
-  background: transparent;
-  border: none;
-  font-size: 1.5rem;
-  color: #fff;
-  cursor: pointer;
+  background-image: url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGFuZHNjYXBlJTIwZGF5fGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60");
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main #box {
+  height: 100%;
+  width: 100%;
+  background: radial-gradient(150px at var(--x) var(--y), rgba(73, 69, 69, 0), rgba(0, 0, 0, 0.959));
+  border-radius: 10px;
 }/*# sourceMappingURL=style.css.map */

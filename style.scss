@@ -7,42 +7,24 @@ html,body{
  height: 100%;
  width: 100%;
 }
-@mixin center-flex{
- display: flex;
- justify-content: center;
- align-items: center;
+@mixin flex-center{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+:root{
+    --x: 0px;
+    --y: 0px;
 }
 main{
- height: 100%;
- width: 100%;
- background-color: #222831;
- #box{
-    height: 40%;
+    @include flex-center;
+    height: 100%;
     width: 100%;
-    background-color: #333;
-    @include center-flex;
-    flex-wrap: wrap;
-    margin-left: .5rem;
-    .hel{
-        height: 90%;
-        width: 8%;
-        margin: .5rem;
-        background-color: #999;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-       
-        button{
-            height: 100%;
-            width: 100%;
-            background: transparent;
-            border: none;
-            font-size: 1.5rem;
-            color: #fff;
-            cursor: pointer;
-            &:active{
-                // background-color: rgba(255, 0, 0,);
-            }
-        }
-    }
+    background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGFuZHNjYXBlJTIwZGF5fGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60');
+    object-fit: cover;
+    #box{
+        height: 100%;
+        width: 100%;
+        background: radial-gradient(150px at var(--x) var(--y), #49454500, rgba(0, 0, 0, 0.959));
+        border-radius: 10px;}
 }
-};

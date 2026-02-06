@@ -1,15 +1,8 @@
-let body = document.body
-let box = document.getElementById("box")
-let hel = document.querySelectorAll(".hel")
-let audio;
-body.addEventListener("keydown", (event) => {
-    console.log(event.key);
-    audio = new Audio(`./audio/${event.key}.mp3`);
-    audio.play();
-});
-hel.forEach((element) => {
-    element.childNodes[0].addEventListener("click", () => {
-        audio = new Audio(`./audio/${element.id}.mp3`);
-        audio.play();
-    });
+let ag = document.querySelector('main'); 
+ag.addEventListener('mousemove', (e) => {
+    console.log(e.clientX, e.clientY);
+    let x = e.clientX;
+    let y = e.clientY;
+    ag.style.setProperty('--x', x + 'px');
+    ag.style.setProperty('--y', y + 'px');
 });
