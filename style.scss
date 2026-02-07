@@ -20,11 +20,19 @@ main{
     @include flex-center;
     height: 100%;
     width: 100%;
-    background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGFuZHNjYXBlJTIwZGF5fGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60');
-    object-fit: cover;
+
     #box{
         height: 100%;
         width: 100%;
         background: radial-gradient(150px at var(--x) var(--y), #49454500, rgba(0, 0, 0, 0.959));
-        border-radius: 10px;}
+        border-radius: 10px;
+    
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            position: relative;
+            z-index: -1;
+        }
+    }
 }
